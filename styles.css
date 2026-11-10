@@ -137,6 +137,9 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
 .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 22px; }
 .tags span { padding: 5px 9px; border-radius: 999px; background: rgba(120,240,197,.075); color: #bfead9; font-size: 10px; }
 .text-button { display: inline-flex; align-items: center; gap: 8px; margin-top: 25px; padding: 0; border: 0; background: none; color: #eef6f3; font-weight: 800; font-size: 13px; cursor: pointer; }.text-button span{color:var(--accent)}
+.project-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 25px; }
+.project-actions .text-button { margin-top: 0; }
+.external-link { color: var(--accent); }
 
 .skills { background: var(--bg-soft); }
 .centered { text-align: center; max-width: 760px; margin-inline: auto; }
