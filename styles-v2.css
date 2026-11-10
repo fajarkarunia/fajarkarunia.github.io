@@ -178,6 +178,9 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
 .credential-copy { min-width:0;display:flex;flex-direction:column; }
 .certification-item .certification-logo { width:72px;height:72px;min-width:72px;max-width:72px;align-self:center;justify-self:end;display:grid;place-items:center;margin:0;padding:7px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.94);overflow:hidden; }
 .certification-item .certification-logo img { width:56px;height:56px;min-width:0;max-width:56px;min-height:0;max-height:56px;display:block;object-fit:contain; }
+.award-item { display:grid;grid-template-columns:minmax(0,1fr) 72px;align-items:stretch;gap:22px; }
+.award-item .award-logo { width:72px;height:72px;min-width:72px;max-width:72px;align-self:center;justify-self:end;display:grid;place-items:center;margin:0;padding:7px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.94);overflow:hidden; }
+.award-item .award-logo img { width:56px;height:56px;min-width:0;max-width:56px;min-height:0;max-height:56px;display:block;object-fit:contain; }
 .award-grid .credential-item:last-child:nth-child(odd) { grid-column: span 2; }
 
 .publications { background: var(--bg-soft); }
@@ -257,7 +260,7 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
   .section-top { align-items:flex-start;flex-direction:column}.filters{justify-content:flex-start}
   .project-grid { grid-template-columns: 1fr; }.project-visual{min-height:250px}
   .skill-grid { grid-template-columns:1fr}.skill-group,.skill-group:nth-child(4),.skill-group:nth-child(5){grid-column:auto;min-height:190px}.skill-group h3{margin-top:28px}
-  .credential-grid,.credential-list{grid-template-columns:1fr}.award-grid .credential-item:last-child:nth-child(odd){grid-column:auto}.education-card{min-height:220px}.credential-item{min-height:135px}.certification-item{grid-template-columns:minmax(0,1fr) 72px;gap:16px}
+  .credential-grid,.credential-list{grid-template-columns:1fr}.award-grid .credential-item:last-child:nth-child(odd){grid-column:auto}.education-card{min-height:220px}.credential-item{min-height:135px}.certification-item,.award-item{grid-template-columns:minmax(0,1fr) 72px;gap:16px}
   .publication-item{grid-template-columns:55px 1fr 25px}.pub-copy b{font-size:15px}
   .contact-panel{padding:35px 25px}.contact-actions{align-items:stretch}.contact-actions .button{flex:1}
   .site-footer .container{flex-direction:column;text-align:center}.site-footer p{margin:0}
