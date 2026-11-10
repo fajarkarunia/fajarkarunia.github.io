@@ -82,8 +82,9 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
 .data-wave path:last-child { stroke: var(--accent); opacity: .55; }
 
 .proof-strip { border-block: 1px solid var(--line); background: rgba(255,255,255,.018); }
-.proof-list { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 26px; overflow: hidden; color: #a9b9bd; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
-.proof-list span::before { content: ""; display: inline-block; width: 5px; height: 5px; margin: 0 14px 2px 0; border-radius: 50%; background: var(--accent); }
+.proof-list { min-height: 108px; display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; gap: 18px; color: #a9b9bd; }
+.tool-item { display: flex; align-items: center; justify-content: center; gap: 13px; min-width: 0; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.tool-item svg { width: 30px; height: 30px; flex: 0 0 30px; fill: none; stroke: var(--accent); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
 .two-column { display: grid; grid-template-columns: .85fr 1.15fr; gap: 10vw; }
 .section-heading h2, .section-top h2, .contact h2 { margin: 0; font-size: clamp(42px, 5vw, 72px); line-height: 1.02; letter-spacing: -.055em; }
@@ -195,7 +196,9 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
 @media (max-width: 760px) {
   .container { width: min(100% - 30px, var(--max)); }.section{padding:88px 0}
   .hero { padding-top: 110px; }.hero-grid{grid-template-columns:1fr}.portrait-wrap{min-height:380px;order:0}.portrait-panel{width:300px}.portrait-orbit{width:340px}.availability{left:8%;bottom:24px}.hero-copy{text-align:center}.hero-intro{font-size:16px}.hero-actions{justify-content:center}
-  .proof-list { overflow-x: auto; justify-content: flex-start; }
+  .proof-list { display: flex; min-height: 96px; overflow-x: auto; justify-content: flex-start; gap: 30px; scrollbar-width: none; }
+  .proof-list::-webkit-scrollbar { display: none; }
+  .tool-item { min-width: 145px; justify-content: flex-start; }
   .section-top { align-items:flex-start;flex-direction:column}.filters{justify-content:flex-start}
   .project-grid { grid-template-columns: 1fr; }.project-visual{min-height:250px}
   .skill-grid { grid-template-columns:1fr}.skill-group,.skill-group:nth-child(4),.skill-group:nth-child(5){grid-column:auto;min-height:190px}.skill-group h3{margin-top:28px}
