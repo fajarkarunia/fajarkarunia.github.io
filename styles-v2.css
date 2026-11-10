@@ -159,11 +159,19 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
 .details-body p { margin: 0; }
 
 .credentials { background: linear-gradient(180deg, var(--bg), #0d1821); }
-.credential-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 55px; }
+.credential-group { margin-top: 55px; scroll-margin-top: 95px; }
+.credential-group-title { display: flex; align-items: center; gap: 18px; margin: 0 0 18px; color: #eef6f3; font-size: 14px; text-transform: uppercase; letter-spacing: .16em; }
+.credential-group-title::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+.credential-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .education-card { padding: 28px; min-height: 250px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.025); display:flex;flex-direction:column; }
 .education-card time { color: var(--accent); font-size: 12px; }.education-card h3{margin:auto 0 7px;font-size:23px;line-height:1.15}.education-card p{margin:0;color:#d7e0e2}.education-card span{margin-top:8px;color:var(--muted);font-size:12px}
-.recognition-row { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 16px; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
-.recognition-row div { padding: 22px 25px; display:grid;border-right:1px solid var(--line)}.recognition-row div:last-child{border:0}.recognition-row b{font-size:14px}.recognition-row span{color:var(--muted);font-size:11px;margin-top:4px}
+.credential-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.credential-item { min-height: 145px; padding: 24px 26px; border: 1px solid var(--line); border-radius: 19px; background: rgba(255,255,255,.022); display: flex; flex-direction: column; justify-content: flex-end; transition: border-color .2s ease, transform .2s ease; }
+.credential-item:hover { border-color: rgba(120,240,197,.38); transform: translateY(-2px); }
+.credential-item time { margin-bottom: auto; padding-bottom: 22px; color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.credential-item h4 { margin: 0; font-size: 17px; line-height: 1.28; }
+.credential-item p { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.award-grid .credential-item:last-child:nth-child(odd) { grid-column: span 2; }
 
 .publications { background: var(--bg-soft); }
 .section-summary { max-width: 460px; margin: 0; color: var(--muted); }
@@ -205,7 +213,7 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
   .section-top { align-items:flex-start;flex-direction:column}.filters{justify-content:flex-start}
   .project-grid { grid-template-columns: 1fr; }.project-visual{min-height:250px}
   .skill-grid { grid-template-columns:1fr}.skill-group,.skill-group:nth-child(4),.skill-group:nth-child(5){grid-column:auto;min-height:190px}.skill-group h3{margin-top:28px}
-  .credential-grid,.recognition-row{grid-template-columns:1fr}.recognition-row div{border-right:0;border-bottom:1px solid var(--line)}
+  .credential-grid,.credential-list{grid-template-columns:1fr}.award-grid .credential-item:last-child:nth-child(odd){grid-column:auto}.education-card{min-height:220px}.credential-item{min-height:135px}
   .publication-item{grid-template-columns:55px 1fr 25px}.pub-copy b{font-size:15px}
   .contact-panel{padding:35px 25px}.contact-actions{align-items:stretch}.contact-actions .button{flex:1}
   .site-footer .container{flex-direction:column;text-align:center}.site-footer p{margin:0}
