@@ -132,6 +132,15 @@ h1 { max-width: 780px; margin: 0; font-size: clamp(58px, 7vw, 104px); line-heigh
 .radial small { font-size: 14px; color: var(--accent); }
 .mini-stat { position: relative; z-index: 2; display: grid; gap: 3px; }
 .mini-stat b { font-size: 22px; }.mini-stat span { color: var(--muted); font-size: 11px; }
+.hospital-visual { isolation: isolate; }
+.hospital-visual > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 32% center; filter: saturate(.78) contrast(1.03); }
+.hospital-visual-shade { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(8,17,24,.95) 0%, rgba(8,17,24,.74) 44%, rgba(8,17,24,.12) 100%), linear-gradient(0deg, rgba(8,17,24,.78), transparent 58%); }
+.hospital-visual .visual-label { position: absolute; z-index: 3; top: 28px; left: 28px; color: #c9d8db; }
+.hospital-kpi { position: absolute; z-index: 3; left: 28px; bottom: 31px; display: grid; }
+.hospital-kpi strong { font-size: 34px; line-height: 1; }
+.hospital-kpi span, .hospital-rate span { margin-top: 6px; color: #b2c3c6; font-size: 10px; }
+.hospital-rate { position: absolute; z-index: 3; right: 24px; bottom: 31px; display: grid; padding: 12px 14px; border: 1px solid rgba(120,240,197,.42); border-radius: 13px; background: rgba(8,17,24,.72); backdrop-filter: blur(7px); }
+.hospital-rate b { color: var(--accent); font-size: 20px; }
 .research-visual { display: flex; align-items: center; justify-content: center; gap: 11px; }
 .research-visual .visual-label { position: absolute; top: 28px; left: 28px; }
 .model-node { position: relative; z-index: 3; display: grid; place-items: center; width: 70px; height: 70px; border-radius: 50%; border: 1px solid rgba(120,240,197,.55); background: rgba(120,240,197,.07); font-weight: 850; }
