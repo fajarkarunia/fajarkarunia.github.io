@@ -54,7 +54,7 @@ const projectData = {
       'Validated Watchlist as an early-warning signal using relative risk, a 95% confidence interval, and a chi-square test.',
       'Translated the findings into a Tableau dashboard and an 8–12 week recovery and prevention pilot.'
     ],
-    tools: ['BigQuery', 'SQL', 'Spreadsheets', 'Tableau', 'Statistical Analysis'],
+    tools: ['BigQuery', 'SQL', 'Spreadsheets', 'Tableau'],
     results: [
       'Problem Inventory reached $172.7M, equal to 66.1% of physical-store ending inventory value.',
       '80.3% of 2024 Problem pairs remained Problem in 2025. Persistent pairs accounted for $164.9M, or 95.5% of exposure.',
@@ -87,7 +87,7 @@ const projectData = {
       'Interpreted standardized effects and practical coefficients, then applied the final model to a new customer scenario.',
       'Converted the findings into recommendations for engagement, journey-friction reduction, promotion targeting, and retention.'
     ],
-    tools: ['Google Sheets', 'Spreadsheet Formulas', 'Correlation Analysis', 'Multiple Linear Regression'],
+    tools: ['Spreadsheets', 'Microsoft Excel', 'Google Slides'],
     results: [
       'The final model retained Income, Tenure, Average Session Time, Total Promo, and Bounce Rate, explaining 92.7% of Yearly Spending variation.',
       'Removing Age reduced adjusted R² by only about 0.08 percentage point and produced a cleaner model.',
@@ -105,6 +105,39 @@ const projectData = {
       ['Open project presentation', 'https://docs.google.com/presentation/d/1cVHaUyCC3L5vQziNV_-9m_9yNHob12zz1CIJy51fMWE/edit?usp=share_link']
     ],
     disclosure: 'Regression results describe statistical associations and do not establish causal relationships.'
+  },
+  revoHospital: {
+    kicker: 'Business intelligence · Tableau',
+    title: 'Revo Hospital Billing Follow-up Priority Dashboard',
+    description: 'An individual Tableau project that turned five related hospital datasets into a focused billing-prioritization system. Rather than building a general performance dashboard, the analysis was designed for a Finance Lead deciding where follow-up effort should be concentrated across Revo Hospital\'s Java network.',
+    stats: [['5,000', 'admissions analyzed'], ['IDR 14.53B', 'pending exposure'], ['714', 'pending admissions']],
+    objective: 'Identify the insurance types, branches, departments, and patient accounts with the highest current pending exposure, then translate the diagnosis into a practical collection work queue.',
+    methodology: [
+      'Related admissions, billing, patients, branches, and departments around one controlled grain: a unique admission. Doctors were excluded because the data did not support physician-level accountability for payment status.',
+      'Validated 5,000 unique admissions and billing records, then reconciled IDR 98.87B in net billed revenue to prevent duplication and revenue overstatement.',
+      'Built executive KPIs for pending revenue, weighted pending rate, admission workload, and average pending bill, supported by payer, trend, branch, department, and geographic comparisons.',
+      'Used a FIXED level-of-detail calculation for stable branch exposure, a dense rank for the Top 5, and a running total to show cumulative pending exposure by admission month.',
+      'Designed a two-stage interaction flow: an analytical overview for diagnosis followed by a searchable, sortable patient-level collection queue for action.'
+    ],
+    tools: ['Tableau Desktop', 'Tableau Public', 'Spreadsheets', 'Google Slides'],
+    results: [
+      'IDR 14.53B was pending, equal to 14.69% of IDR 98.87B in net billed revenue; the queue contained 714 admissions with an average pending bill of IDR 20.34M.',
+      'Self-pay had the clearest relative-risk signal: a 35.39% pending rate and IDR 4.31B in exposure, or 2.41 times the network pending rate.',
+      'Government insurance carried the largest pending value at IDR 4.95B, but its 12.49% rate indicated a scale-driven priority rather than the same pattern as self-pay.',
+      'Jakarta Selatan, Jakarta Pusat, and Surabaya accounted for IDR 7.96B, or 54.8% of pending exposure; Jakarta Selatan ranked first at IDR 3.08B.',
+      'The operational queue identified the largest individual case at IDR 84.95M while showing that the Top 10 represented only 4.61% of exposure, supporting a complete tiered workflow rather than a Top-10-only strategy.'
+    ],
+    gallery: [
+      ['assets/projects/revo-hospital/dashboard-overview.png', 'Final Tableau overview and its decision hierarchy'],
+      ['assets/projects/revo-hospital/collection-queue.png', 'Patient-level collection queue for operational follow-up'],
+      ['assets/projects/revo-hospital/payer-priority.png', 'Payer priority matrix comparing pending value, rate, and workload'],
+      ['assets/projects/revo-hospital/branch-department.png', 'Branch map and branch-by-department heatmap']
+    ],
+    links: [
+      ['Open Tableau dashboard', 'https://public.tableau.com/views/RevoHospitalBillingFollow-up/BillingFollow-upCollectionPriorities?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'],
+      ['Open project presentation', 'https://docs.google.com/presentation/d/1vVAT3aefcYkM6X-AMN14vVPCPTwIMekpMkUvaXjUCdE/edit?slide=id.g3fb4166969e_1_64#slide=id.g3fb4166969e_1_64']
+    ],
+    disclosure: 'Pending is a current billing status, not evidence that a balance is overdue, uncollectible, or caused by a specific party. Aging analysis would require invoice due dates or days-outstanding data.'
   },
   vba: {
     kicker: 'Reporting automation · Portfolio sample',
